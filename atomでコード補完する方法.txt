@@ -1,0 +1,11 @@
+https://qiita.com/s-shin/items/33bdfc5b819dab320808
+http://puyobyee18.hatenablog.com/entry/2018/06/12/124433
+https://qiita.com/maxmellon/items/0e6173cdd51843053839
+
+https://www.youtube.com/watch?v=fw-_mvgoVcE
+
+1.atom-ternjs(パッケージ)をインストール
+2.適応したいプロジェクトを選択して(しなくていいかも？)、上タブのパッケージ＞Atom Ternjs>Configure project>ecmaVersion(6)、libs(browser、jquery)を選択し、save&Restart Serverクリック
+3.プロジェクト直下に「.tern-project」が作成される
+
+※選択しているプロジェクトの中のjsファイルを開いている必要があるかも？
