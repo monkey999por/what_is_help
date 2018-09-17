@@ -17,3 +17,6 @@ https://qiita.com/chosan211/items/f104b3d3fb77081f7415
 http://hatehate-masaki.hatenablog.com/entry/2017/01/18/235633
 
 ・サーバの追加
+
+・コンテキストの再ロードがを自動化する(Javaに変更を加えたときにいちいちwebコンテナ再起動しなくてよくなる)
+⇒server.xmlの<Context docBase="sukkiri_servlet" path="/sukkiri_servlet" reloadable="false" source="org.eclipse.jst.jee.server:sukkiri_servlet"/></Host>のreloadable="false"をtrueに変更する
