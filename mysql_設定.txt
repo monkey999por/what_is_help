@@ -27,3 +27,18 @@ eclipseの動的webプロジェクトでMySQLを使用
 java
 JDNIを以下のように使用
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+.
+.
+.
+InitialContext initCon = new InitialContext();
+DataSource ds = (DataSource) initCon.lookup("java:comp/env/jdbc/sample");
+Connection con = ds.getConnection();
+String sql="SELECT * FROM table";
+PreparedStatement preparedStatement=con.prepareStatement(sql);
