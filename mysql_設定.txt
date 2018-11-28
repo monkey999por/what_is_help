@@ -1,0 +1,29 @@
+参考：https://www36.atwiki.jp/drip122/pages/22.html
+
+・Mysqlをtomcatで使用する
+⇒tomcatのクラスパスにmysqlのjarを通す(tomcatインストールディレクトリのlibフォルダにmysqlのjarファイルを配置)
+	※プロジェクトのクラスパスではないので注意
+
+eclipseの動的webプロジェクトでMySQLを使用
+※JDNIを使用したtomcatとの連携
+
+サーバー配下のweb.xmlの<web-app>配下に以下を記述
+<resource-ref>
+    <description>any_description</description>
+    <res-ref-name>jdbc/sample</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+
+プロジェクトのWebContent/META-INF直下に以下に「context.xml	」を作成し、を記述
+
+<Context>
+<Resource name="jdbc/sample" auth="Container" type="javax.sql.DataSource"
+         username="username"
+         password="password"
+         driverClassName="com.mysql.cj.jdbc.Driver"
+         url="url" />
+ </Context>
+
+java
+JDNIを以下のように使用
+
