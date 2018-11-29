@@ -44,6 +44,17 @@ About to write to C:\Users\Owner\workspace\docoTsubu\package.json:
 -------------------------------------------------
 
 あとはサイト内のものを参考に
+eslintのインストールはグローバルで行う「npm install -g eslint」
+※ローカルインスコだとなんかうまくいかん
+
+「.eslintrc」は普通に作って中に
+{
+  "extends": "eslint:recommended"
+}
+でいいと思う
+
+・memo
+atomのパッケージのESLintのsettingの「Path to the local node_modules folder」に、npm initで作成された「node_modules」(プロジェクトディレクトリにあるはず)の絶対パスを指定すれば、ローカルインストールでもうまくいくはずなのに、なんか無理
 
 }
 
