@@ -2,7 +2,7 @@
 
 ・Mysqlをtomcatで使用する
 ⇒tomcatのクラスパスにmysqlのjarを通す(tomcatインストールディレクトリのlibフォルダにmysqlのjarファイルを配置)
-	※プロジェクトのクラスパスではないので注意
+	たまに動かないから、プロジェクト自体にパス通すのか、tomcatのエントリにパス通すのか、WEB-INF/libに配置するのか、いろいろしてみて
 
 eclipseの動的webプロジェクトでMySQLを使用
 ※JDNIを使用したtomcatとの連携
@@ -13,6 +13,7 @@ eclipseの動的webプロジェクトでMySQLを使用
     <res-ref-name>jdbc/sample</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
+</resource-ref>
 
 プロジェクトのWebContent/META-INF直下に以下に「context.xml	」を作成し、を記述
 
