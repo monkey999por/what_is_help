@@ -1,0 +1,50 @@
+・jsのauto-complete{
+https://qiita.com/s-shin/items/33bdfc5b819dab320808
+http://puyobyee18.hatenablog.com/entry/2018/06/12/124433
+https://qiita.com/maxmellon/items/0e6173cdd51843053839
+
+https://www.youtube.com/watch?v=fw-_mvgoVcE
+
+1.atom-ternjs(パッケージ)をインストール
+2.適応したいプロジェクトを選択して(しなくていいかも？)、上タブのパッケージ＞Atom Ternjs>Configure project>ecmaVersion(6)、libs(browser、jquery)を選択し、save&Restart Serverクリック
+3.プロジェクト直下に「.tern-project」が作成される
+
+※選択しているプロジェクトの中のjsファイルを開いている必要があるかも？
+}
+
+・linterの導入{
+参考：https://mae.chab.in/archives/2874
+
+npmを使用するので事前にnode.jsをインストールしておく
+Node.js command promptを起動して、cdコマンドでプロジェクトディレクトリに移動
+$ npm initで初期化(下記を参考に)
+
+-------------------------------------------------
+C:\Users\Owner\workspace\docoTsubu>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (docotsubu)
+version: (1.0.0)
+description: docoTsubu package.json
+entry point: (index.js)
+test command:
+git repository: (https://github.com/monkey999por/servlet_sample.git)
+keywords:
+author: yururi
+license: (ISC)
+About to write to C:\Users\Owner\workspace\docoTsubu\package.json:
+-------------------------------------------------
+
+あとはサイト内のものを参考に
+
+}
+
+
