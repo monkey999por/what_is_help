@@ -2,11 +2,14 @@
 
 ・Mysqlをtomcatで使用する
 ⇒tomcatのクラスパスにmysqlのjarを通す(tomcatインストールディレクトリのlibフォルダにmysqlのjarファイルを配置)
+	mysql-connector-java-8.0.16.jar的なやつ　32ビットの方にあった
 	たまに動かないから、プロジェクト自体にパス通すのか、tomcatのエントリにパス通すのか、WEB-INF/libに配置するのか、いろいろしてみて
 
 eclipseの動的webプロジェクトでMySQLを使用
 ※JDNIを使用したtomcatとの連携
 
+
+http://www.wakhok.ac.jp/~tomoharu/web2004/text/index_c8.html
 サーバー配下のweb.xmlの<web-app>配下に以下を記述
 <resource-ref>
     <description>any_description</description>
