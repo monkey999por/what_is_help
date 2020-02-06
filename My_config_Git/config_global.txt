@@ -1,0 +1,18 @@
+[core]
+        autocrlf = false
+[user]
+        name = <username> #ex. taro
+        email = <mail>    #ex.test@hello.com
+[credential]
+        helper = manager
+[alias]
+        a = add
+        b = branch
+        c = checkout
+        ch = cherry-pick
+        d = diff
+        l = log --graph --all --format='%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset
+%s'
+        rmh = reset --mixed head
+        rhh = reset --hard head
+        s = status
