@@ -1,0 +1,3 @@
+﻿https://qiita.com/alchemist/items/e6706cd425f8f5e5032e
+
+powershell -ExecutionPolicy RemoteSigned -File script.ps1
