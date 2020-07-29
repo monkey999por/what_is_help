@@ -1,0 +1,36 @@
+
+#参考
+#http://onceuponatimeit.hatenablog.com/entry/2016/02/20/004837
+
+#System.Windows.Formsのインポートを行う
+add-type -AssemblyName System.Windows.Forms
+#メモ帳を開く
+notepad
+#500ミリ秒スリープ
+start-sleep -Milliseconds 500
+#aiueoと入力
+[System.Windows.Forms.SendKeys]::SendWait("aiueo")
+start-sleep -Milliseconds 500
+#%(パーセントはAltを表す)と入力
+[System.Windows.Forms.SendKeys]::SendWait("%")
+start-sleep -Milliseconds 500
+#メモ帳を開いてAlt→f→aと打ってみればわかるさ
+[System.Windows.Forms.SendKeys]::SendWait("fa")
+start-sleep -Milliseconds 500
+#ファイル名を入力
+[System.Windows.Forms.SendKeys]::SendWait("text0")
+start-sleep -Milliseconds 500
+#Alt→dと打ってみればわかるさ
+[System.Windows.Forms.SendKeys]::SendWait("%d")
+start-sleep -Milliseconds 500
+#保存先を入力
+[System.Windows.Forms.SendKeys]::SendWait("d:")
+start-sleep -Milliseconds 500
+#エンターは{}で囲う
+[System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
+start-sleep -Millisecon1ds 500
+#保存
+[System.Windows.Forms.SendKeys]::SendWait("%s")
+start-sleep -Milliseconds 500
+#メモ帳を閉じる
+[System.Windows.Forms.SendKeys]::SendWait("%{F4}")
