@@ -1,0 +1,22 @@
+Gitでリモートリポジトリの作成と、既存のリポジトリをpushするとこまで
+
+
+■リモートリポジトリ作成側の操作
+1.フォルダ作成
+mkdir repname.git
+
+2.1で作成したフォルダを共有する（ユーザが違う場合はユーザを追加する）
+
+3.リモートリポジトリ作成
+cd repname.git
+git init --bare --shared
+
+
+■既存ローカルリポジトリ作成側の操作
+1.リモートの登録
+git remote add origin \\ComputerName\reps\repname.git ※共有したパス
+
+2.既存のコミットをプッシュする
+すでにコミット済みのデータがある前提で
+git push -u origin branch_name
+
