@@ -1,0 +1,21 @@
+[core]
+	editor = sakura
+	autoCRLF = false
+	quotepath = false
+[user]
+	name = monkey999por
+	email = 34706709+monkey999por@users.noreply.github.com
+[credential]
+	helper = manager
+[alias]
+	a = add
+	b = branch
+	c = checkout
+	ch = cherry-pick
+	d = diff
+	rmh = reset --mixed head
+	rhh = reset --hard head
+	s = status
+	l = log --graph --all --format='%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(green reverse)%d%Creset%s' --branches
+[winUpdater]
+	recentlySeenVersion = 2.27.0.windows.1
