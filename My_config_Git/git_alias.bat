@@ -7,3 +7,4 @@ git config --global alias.l "log --graph --all --format='%%x09%%C(cyan bold)%%an
 git config --global alias.rmh "reset --mixed head"
 git config --global alias.rhh "reset --hard head"
 git config --global alias.s "status"
+git config --global alias.branch-desc = """!f(){ git config branch.$1.description;};f"""
