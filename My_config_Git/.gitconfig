@@ -16,7 +16,7 @@
 	rmh = reset --mixed head
 	rhh = reset --hard head
 	s = status
-	l = log --graph --all --format='%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(green reverse)%d%Creset%s' --branches
+	l = log --graph --all --format='[%as %ah] %x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(green reverse)%d%Creset%s' --branches
 	branch-desc = "!f(){ git config branch.$1.description;};f"
 [winUpdater]
 	recentlySeenVersion = 2.27.0.windows.1
