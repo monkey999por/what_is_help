@@ -1,0 +1,4 @@
+パワーシェルメモ
+
+■grepするならこんな感じ。※除外フォルダを同時に指定するとなぜかうまくいかないので、①除外　②対象ファイル　③grepみたいな流れ
+Get-ChildItem -Exclude @(".next","node_modules") |Get-ChildItem -Recurse -File |Select-String -Pattern "utils.module"

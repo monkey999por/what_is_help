@@ -1,0 +1,52 @@
+Spring Bootメモ
+https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#legal
+
+■ここでpom.xmlのひな型とかが作れる。
+https://start.spring.io/
+
+■チュートリアル
+https://spring.io/guides/gs/rest-service/
+
+■起動
+mvn spring-boot:run
+
+■実行可能jar生成
+mvn package spring-boot:repackage
+実行
+java -jar bluefairy-0.1.0.jar --server.port=8011 --logging.level.org.springframework.web=DEBUG
+
+■intellj設定とか
+・起動方法
+ツールバーからView -> Tool Window -> Maven。Mavenウィンドウでspring-boot -> spring-boot:run（mvnでビルドすると普通にSpring bootに組み込みのTomcatが起動する）
+
+・デバッグ方法
+　１．intelljの通常実行でデバッグ（@SpringBootApplicationがついたクラスのmainを実行（SpringApplication.run()を実行後にブレイク）
+　２．リモートデバッグを使う
+　　　
+　　　参考：https://reasonable-code.com/intellij-remote-debug/
+　　　
+■チュートリアル等
+https://spring.io/guides
+
+・Rest
+https://spring.io/guides/gs/rest-service/
+
+・アプリ
+https://spring.io/guides/gs/spring-boot/
+
+・バッチ
+https://spring.io/guides/gs/batch-processing/
+
+・セキュリティ
+https://spring.io/guides/gs/securing-web/
+
+あとはこの辺の長期チュートリアル
+https://spring.io/guides
+
+
+■Thymeleafについて
+https://qiita.com/opengl-8080/items/eb3bf3b5301bae398cc2#thymeleaf-%E3%81%A8%E3%81%AF
+
+■その他参考記事
+　https://www.greptips.com/posts/1318/
+　https://qiita.com/kazuki43zoo/items/8645d9765edd11c6f1dd

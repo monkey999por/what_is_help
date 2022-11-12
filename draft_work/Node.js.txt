@@ -1,0 +1,51 @@
+■NodeとかJs自体の歴史。最初に読むべき
+https://qiita.com/hiroki-yama-1118/items/382f38054a9e7d31e455
+
+■メモ
+text/jsxなるECMA Scriptの拡張構文があるらしい。
+https://qiita.com/koba04/items/039b9c974df284766f64
+こんな感じの
+```
+ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app);
+
+```
+
+コンポーネント名（関数名）は大文字にする必要があります。(Reactのコンポーネントであることを明示。htmlタグと区別
+
+
+CSSのインポート：例えばbootstrapを使いたい場合。
+https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet
+
+
+javascriptリファレンス
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference
+
+なんかこれよさげ
+https://developer.mozilla.org/ja/plus#subscribe
+
+pagesの下がそのままURL
+
+publicディレクトリは静的コンテンツ（画像とか？）を配置
+reactが自動でtopレベルと認識するので、
+public/image.jpgは
+<Link rel="icon" href=/image.jpg>
+でアクセスできる（多分）
+
+
+Nextが自動で実行する
+リクエスト時にサーバで実行⇒getStaticProps()
+ビルド時にサーバで実行⇒getServerSideProps
+クライアントで実行()⇒SWR?(https://nextjs.org/learn/basics/data-fetching/request-time)
+
+ダイナミックルートのその他もろもろ
+https://nextjs.org/learn/basics/dynamic-routes/dynamic-routes-details
+
+CSSは[name].module.cssファイル形式じゃないとエラーになるっぽい？
+https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css
+
+■TODO
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+次ここから
+https://nextjs.org/learn/basics/data-fetching
+

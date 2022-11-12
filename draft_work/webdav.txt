@@ -1,0 +1,43 @@
+OSインストール後
+ufwで設定
+プライベートIPの固定
+dhdpcd.conf?
+
+
+/etc/apache2/.htpasswd 
+webdav
+wevdab
+
+
+
+結局これ↓https://www.server-world.info/query?os=Ubuntu_20.04&p=httpd&f=9
+sudo vi /etc/apache2/sites-available/webdav.conf
+
+Alias /webdav /var/www/webdav
+<Directory /webdav>
+DAV On
+</Directory>
+
+
+
+
+wagonがputでおこうとするので、apacheでputを有効化する↑の設定でmvnrepを指定
+
+これ↓
+https://mymanfile.com/?p=944
+
+これらは、対応する *-available/ から利用可能な構成ファイルをシンボリックリンクすることによってアクティブ化されます。これらは、ヘルパー a2enmod、a2dismod、 a2ensite、a2dissite、 および a2enconf、a2disconf を使用して管理する必要があります。詳細については、それぞれのマニュアル ページを参照してください。
+
+
+
+
+
+
+なんか最終的にこれをそのままやったらできた。エクスプローラからの接続はできた。
+maven deployもできた
+https://www.digitalocean.com/community/tutorials/how-to-configure-webdav-access-with-apache-on-ubuntu-14-04#step-one-installing-apache
+
+⇒原因はapacheでwebdavがちゃんと設定されていなかった、
+⇒ブラウザで普通にファイルやディレクトリが見れていたのはそもそもそういうものらしい。webdavで見れていたわけではなかった。
+⇒何が問題だったのかは後で調べてみる。
+⇒バーチャルホストの下に書けばいける？

@@ -1,0 +1,22 @@
+CSV+
+RelaxTools Addin（Excel addin grepとかできるようになる。）
+Rancherr Desktop(Docker Desctop for windows)
+Power toys
+https://www.cube-soft.jp/cubepdfutility/
+
+https://github.com/lucasg/Dependencies
+github cli
+DevToys(microsoft)
+Postman
+最前面でポーズ
+Sphinx（ドキュメンテーションジェネレータ）
+消費リソース零
+https://debugroom.github.io/mynavi-doc-draft/cloud_native/aws-lambda-and-api-gateway-1.html
+定型文登録（windowsのIME)
+WinWoL(PCの遠隔起動）
+JMeter
+
+
+https://terasolunaorg.github.io/guideline/5.4.1.RELEASE/ja/Tutorial/TutorialREST.html
+
+https://www.vector.co.jp/vpack/filearea/winnt/prog/tool

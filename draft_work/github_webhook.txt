@@ -1,0 +1,2 @@
+特に難しいことはない。
+ドキュメントとか読んでないけどとりあえず思うように設定すればうまくいく。https://github.com/monkey999por/General_help/settings/hooks

@@ -1,0 +1,24 @@
+https://mugeek.hatenablog.com/entry/2019/05/27/230256
+
+apacheを完全に再インストールするとき
+①インストールされているぱけーじの確認
+dpkg --get-selections | grep apache
+
+②パッケージの完全削除
+sudo apt-get --purge -y remove apache2
+sudo apt-get --purge -y remove apache2-utils
+sudo apt-get --purge -y remove apache2-bin
+sudo apt-get --purge -y remove apache2-data
+
+③インストール
+sudo apt install apache2
+
+
+
+webdav設定でこんなエラーが出る
+[Wed Sep 28 09:47:57.420705 2022] [autoindex:error] [pid 16411:tid 548491841920] [client 192.168.10.54:61322] AH01276: Cannot serve directory /home/webdav/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive
+
+webdavのディレクトリを/home/webdavにしてるのが問題かも？
+
+こんな感じに修正
+mods-available/userdir.confをコメントアウト

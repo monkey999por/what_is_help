@@ -1,0 +1,62 @@
+ここからaccount作成
+https://developers.line.biz/ja/services/messaging-api/
+
+
+チュートリアル
+https://developers.line.biz/ja/docs/messaging-api/getting-started/
+
+■コンソール
+https://developers.line.biz/console/
+
+■Bot管理？
+https://manager.line.biz/
+
+なんかBotサーバーが必要っぽいので
+
+
+API
+https://developers.line.biz/ja/reference/messaging-api/#get-number-of-followers
+
+
+ちょっと見たら動きなんとなくわかるかも
+★単純にこのチュートリアルくそわかりやすいのでまた見てみろ
+https://developers.line.biz/ja/docs/messaging-api/nodejs-sample/
+
+■メモ
+流れ
+①githubにプルリクエストする
+②github actrion（https://docs.github.com/ja/developers/webhooks-and-events/webhooks/about-webhooks）でBot server(※1)にwebhockする
+③Bot serverからline pratform(※2)にプッシュ通知API（https://developers.line.biz/ja/reference/messaging-api/#send-push-message）をPOSTする。 ※ブロードキャストでもいいとおもう。
+⑤line pratformからLine Botに通知され、Botがユーザにメッセージを送信する。
+
+※１：Bot Server・・・line pratformとやり取りをするサーバ。例えばユーザからLine Botへのメッセージは①Bot⇒②Line Pratform⇒③Bot Server（ここでいろいろ処理）⇒④Line Pratform⇒⑤Line Botがユーザに返信　のような流れでやり取りされる。
+------------------
+※※ちなみに今回の場合だと、ユーザからBotへのメッセージ送信はない（＝最初のアクションが①⇒②⇒③ではなく、Github action⇒（③）⇒④⇒・・・）想定なので、もしかしらたBot Serverはいらないかも？
+　⇒Github Actionから直接④Line PratformにPostすればBot Serverは用意しなくていいかも
+　　★⇒Github Actionがどのレベルでリクエスト制御可能なのか調べる
+　　
+※Line pratformからのリクエストであることの検証はこれ
+https://developers.line.biz/ja/docs/messaging-api/receiving-messages/#verifying-signatures
+------------------
+※２：line pratform・・・LineのAPIサーバ（ユーザから見ると）かつBot制御等もろもろを制御するプラットフォーム。
+　　　　　　　　　　　　 開発者が意識する必要は無さそうだが、間にこんなのがあるよってだけ。
+　　　　　　　　　　　　 
+　　　　　　　　　　　　 
+■API利用メモ
+これ使う
+https://developers.line.biz/ja/reference/messaging-api/#send-push-message
+"to"プロパティ・・・送信先のID。ここでいう送信先とは、Line PlatformがどのBotに対して通知するか、というもの。（つまりボットのUser Id。Botがどのユーザに送るか、ではないので注意）
+
+ちなみにこんな感じ
+shell
+
+ curl -v -X POST https://api.line.me/v2/bot/message/push -H 'Content-Type: application/json' -H 'Authorization: Bearer {key}' -d '{
+    "to": "{user}",
+    "messages":[
+        {
+            "type":"text",
+            "text":"Hello, world1"
+        }
+    ]
+}'
+

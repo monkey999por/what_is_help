@@ -1,0 +1,14 @@
+■とりあえず
+setting.json ⇒vscodeの設定ファイル
+package.json⇒node.jsの設定ファイル
+
+
+
+■user snippet
+https://qiita.com/282Haniwa/items/82828c6a566e3e7e047d
+C:\Users\nogam\AppData\Roaming\Code\User\snippets
+
+
+
+setting.jsonにこれ書けばキーワードがインテリセンスにでなくなる
+"editor.suggest.showWords": false,

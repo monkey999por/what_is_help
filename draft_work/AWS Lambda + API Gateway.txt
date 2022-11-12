@@ -1,0 +1,47 @@
+■Todo
+無料枠超えそうなときどうする？
+なんにせよ管理ちゃんとしないとマジで課金リスクやばそう。
+実行可能ユーザを絞るか、使わないときは機能を停止しとくとか。
+後はアラートの仕組みとかも必要。
+
+テスト用のlambdaとapi gatewayを削除する。
+
+
+■Tips
+URLのドメイン部分ががリージョン（データセンターのグループのようなもの）
+によって異なるので注意。
+今使ってるのはここ
+us-west-2.console.aws.amazon.com
+
+--------------------------------------------------
+■AWS LambdaLambda概要
+コード実行環境。Lambda上にコードをデプロイして、もろもろのトリガで実行可能。Node.jsとかはブラウザで直接書いてデプロイできるけどjavaはjarをデプロイする感じっぽい。
+トリガ例：
+：S3にファイルがおかれたとき。
+：API Gateway
+
+■無料利用枠（月100万リクエストまで）
+https://aws.amazon.com/jp/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=tier%23always-free&awsf.Free%20Tier%20Categories=*all&all-free-tier.q=lambda&all-free-tier.q_operator=AND
+
+■ログ
+ちょっと設定とかはまた調べないとだけど、チュートリアル？かデフォルトでlambda構成するとcloud watchに出力されるっぽい（console.log()とか）
+https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups
+
+
+■余談：直接たたく場合の設定
+関数URLを設定
+https://us-west-2.console.aws.amazon.com/lambda/home?region=us-west-2#/functions/testFunction?tab=configure
+
+※※注意※※
+認証は必ずAWS＿IAMのほうにする。NONEだとURLさえ知っていれば世界中の誰でもリクエストが可能になる。
+関数URLの設定（権限とか）
+https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html
+
+
+--------------------------------------------------
+■API Gateway
+■チュートリアル（ラムダもここで一緒にできる）
+https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started.html
+
+■無料利用枠（月100万リクエストまで）
+
