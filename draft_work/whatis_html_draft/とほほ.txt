@@ -28,7 +28,6 @@ javascriptのimport module の機能を利用してHTMLファイルを動的に�
 もともとはimport html?(linkタグでhtmlを指定する)みたいのがあったみたいだけどいろいろ課題があってやらない方がいいらしい。
 
 ■CDNの使い方とかも見たい。
-とほほは見終わたよ
 
 
 ■要素について
@@ -44,9 +43,13 @@ javascriptのimport module の機能を利用してHTMLファイルを動的に�
 
 
 HTML5ではブロック/インライン要素は廃止されている。ただし概念としては重要なので覚えておくとよい。
+廃止されているとはいえ、ブロック/インラインの改行のあり/なしは仕様としてある。あくまで考え方として意識しなくなるだけ。
 カテゴリとコンテンツモデル(HTML5 : https://www.tohoho-web.com/html/memo/html5.htm#include)
 これがわかりやすい
 https://www.asobou.co.jp/blog/web/html5-3
+https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Content_categories
+
+
 ※パルパブルコンテンツ（フローコンテンツやフレージングコンテンツを子要素に持つことができる要素）
 という分け方もある。。sectionの中にh1を入れられるのはこの仕様のため。
 （sectionもh1もパルパブルコンテンツに分類される）
@@ -63,7 +66,34 @@ https://www.tohoho-web.com/html/char.htm
 > ⇒ &gt;
 
 
-★要素の包容関係　https://www.tohoho-web.com/html/memo/elmtree.htm
+★HTML4.01要素の包容関係　https://www.tohoho-web.com/html/memo/elmtree.htm
+
+■ブラウザのHTML,CSSの解釈モード
+http://www.htmq.com/htmlkihon/302.shtml
+標準モード（Standard）と互換モード（Quirks）があるらしい。
+互換モードはまだCSSが普及していなかった時代の過去のブラウザとの互換のためのもの。
+
+HTML5におけるDOCTYPE宣言は、あまり意味を持たないとされていますが、 DOCTYPE宣言が無いとブラウザのレンダリングモードが、互換モード（Quirks mode）となってしまいます。 ブラウザに標準モード（Standards mode）で解釈させたい場合には、DOCTYPE宣言を記述する必要があります。
+
+■ざっくりHTML5でできるようになったこと
+http://www.htmq.com/html5/002.shtml
+
+sectionとかheaderとかのサンプルはだいたいこんな感じ
+http://www.htmq.com/html5/003.shtml
+
+ドラッグ＆ドロップとかもできるって
+http://www.htmq.com/dnd/
+
+ファイルアップロード系。これくそいいかもな
+https://www.dropzone.dev/
+
+
+
+ブラウザAPIとかいろいろ
+http://www.htmq.com/api/
+クリップボードとかも見れるらしい。。すごい
+
+※ブラウザでのロードについて調べたい。遅延ロードとか動的ロードとか
 
 
 
