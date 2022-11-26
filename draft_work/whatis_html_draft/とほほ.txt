@@ -1,0 +1,72 @@
+■最初に読むべきもの
+https://www.tohoho-web.com/html/memo/index.htm
+
+
+■メモ
+・形式
+<要素 属性="値" />
+<要素 属性 />
+基本的にすべて小文字。でも大文字でも認識はされるらしい
+
+
+■たぶん（勝手に書いてるだけ）
+ブラウザで表示されるときは、上から順に表示されていくだけ。
+で、横幅は最大になる。素のHTMLだけだとほんとに縦に順に要素が並ぶだけ。
+たぶん考えないといけないのは、HTMLでブロックごとに定義して、それをCSSでどう配置するか決める。
+
+
+共通的な属性がある？
+⇒https://www.tohoho-web.com/html/attr/globals.htm
+⇒グローバル属性。どの要素にも指定可能な属性。スクリプトのonXXXXとか、id ,class, data-*(カスタムデータ属性),hidden, ... 他にもあるけど使いそうなのはこれくらいかな
+
+省略可能な要素について
+
+
+■HTML modules
+https://speakerdeck.com/takanorip/10fen-deli-jie-suru-html-modules?slide=8
+javascriptのimport module の機能を利用してHTMLファイルを動的にインポートしてDOM内に差し込んでやろうというやつ。
+もともとはimport html?(linkタグでhtmlを指定する)みたいのがあったみたいだけどいろいろ課題があってやらない方がいいらしい。
+
+■CDNの使い方とかも見たい。
+とほほは見終わたよ
+
+
+■要素について
+ブロック/インライン要素(HTML4.1)
+とりあえず
+ブロック：要素ごとに改行されて表示される
+インライン：改行されない
+
+インライン要素の中にブロック要素は定義不可・逆はOK
+普段使っててよく知ってるものはだいたいインライン要素。
+ブロック：form, div, p
+インライン：文章を弄るようなもの（strong）formの中身(input, button)
+
+
+HTML5ではブロック/インライン要素は廃止されている。ただし概念としては重要なので覚えておくとよい。
+カテゴリとコンテンツモデル(HTML5 : https://www.tohoho-web.com/html/memo/html5.htm#include)
+これがわかりやすい
+https://www.asobou.co.jp/blog/web/html5-3
+※パルパブルコンテンツ（フローコンテンツやフレージングコンテンツを子要素に持つことができる要素）
+という分け方もある。。sectionの中にh1を入れられるのはこの仕様のため。
+（sectionもh1もパルパブルコンテンツに分類される）
+
+
+■属性の特殊記号について
+画面上に", &とかを表示させたい場合は文字参照の形式にする必要がある。
+https://www.tohoho-web.com/html/char.htm
+つまりこうなる
+' ⇒ &#39;
+" ⇒ &quot;
+& ⇒ &amp;
+< ⇒ &lt;
+> ⇒ &gt;
+
+
+★要素の包容関係　https://www.tohoho-web.com/html/memo/elmtree.htm
+
+
+
+
+
+
