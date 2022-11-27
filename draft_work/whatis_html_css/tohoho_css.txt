@@ -15,7 +15,17 @@ npm のpercelとかよさそう？webpackのいろいろ自動でやってくれ
 
 
 
+
 TODO
 ベンダープレフィックス？
 要素の横並びはflexBox使うらしい
 リキッドデザイン？
+
+■HTML要素におけるCSSの有効範囲はここが分かりやすい
+https://www.tohoho-web.com/css/basic.htm#TagElementSelector
+
+■継承
+親要素に指定されたスタイルの多くは、子要素に継承されます。
+
+
+https://www.tohoho-web.com/ex/css-cascade-layers.html
