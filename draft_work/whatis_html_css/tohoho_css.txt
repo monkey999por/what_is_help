@@ -24,8 +24,15 @@ TODO
 ■HTML要素におけるCSSの有効範囲はここが分かりやすい
 https://www.tohoho-web.com/css/basic.htm#TagElementSelector
 
+■適用の優先順位
+https://www.tohoho-web.com/css/basic.htm#Priority
+・基本的には、id, classが強くて、:とか::とかは弱い。要素指定(p,h1..)とかはかなり弱い
+・同じ優先度だと、一つのCSS定義で単純にセレクタの数が多い方が優先度が高くなる。
+
 ■継承
 親要素に指定されたスタイルの多くは、子要素に継承されます。
 
-
+■CSSカスケードレイヤ
 https://www.tohoho-web.com/ex/css-cascade-layers.html
+CSS適用の優先度を変更できる。
+CSSには優先度の計算方法があるが、それだと都合が悪いケースがあるので、この機能を使う。
