@@ -1,0 +1,16 @@
+/* body {
+  background-color: black;
+} */
+
+/* tag selector */
+h6 {
+  color: red;
+}
+
+/* class selector */
+.cool {
+  font-size: 32pt;
+}
+.pretty {
+  color: lime;
+}

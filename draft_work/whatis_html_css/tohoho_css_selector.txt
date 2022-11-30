@@ -1,0 +1,7 @@
+■about selector
+https://www.tohoho-web.com/css/selector.htm#Combinator
+
+・ユニバーサルセレクタ　* { ... }
+優先度はめちゃくちゃ高い（よくわからないけど、、）
+
+間を空けない場合は？
