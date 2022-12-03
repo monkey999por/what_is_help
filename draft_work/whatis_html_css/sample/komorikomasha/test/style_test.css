@@ -14,3 +14,15 @@ h6 {
 .pretty {
   color: lime;
 }
+/* .class && .class */
+/* 一つの要素で、どちらのクラスも持っていれば適用される */
+/* 親要素、子要素でそれぞれのクラスを持っている場合は適用されない */
+.cool1.pretty1 {
+  font-size: 30pt;
+  color: blue;
+}
+
+div.test {
+  font-size: 30pt;
+  color: red;
+}

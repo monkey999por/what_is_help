@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style_test.css"> -->
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">
+    <link rel="stylesheet" href="style_test.css">
     <title>Style Test</title>
 </head>
 
@@ -34,12 +33,16 @@
             <p class="pretty">これはprettyな文章です</p>
             <p class="cool">これはcoolな文章です</p>
             <p class="cool">これもcoolな文章です</p>
-            <p class="cool pretty">これは、coolでprettyな文章です</p>
+            <p class="cool1 pretty1">これは、coolでprettyな文章です</p>
+            <div class="cool1">
+                <!-- クラス指定にスペースは開いててもOK -->
+                <p class=" pretty1">this is no cool and pretty</p>
+                <div class="test">tag and class </div>
+                <p class="test">tag and class (dose not match tag)</p>
 
+            </div>
         </section>
-
     </main>
-
 
 
 </body>
