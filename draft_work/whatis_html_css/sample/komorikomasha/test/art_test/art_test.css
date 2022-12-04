@@ -2,36 +2,6 @@ body {
   /* background-color: rgb(252, 250, 229); */
   margin: 0px;
 }
-
-/* tag selector */
-h6 {
-  color: red;
-}
-
-/* class selector */
-
-.cool {
-  font-size: 32pt;
-  font-family: Söhne, ui-sans-serif, system-ui, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-}
-.pretty {
-  color: lime;
-}
-/* .class && .class */
-/* 一つの要素で、どちらのクラスも持っていれば適用される */
-/* 親要素、子要素でそれぞれのクラスを持っている場合は適用されない */
-.cool1.pretty1 {
-  font-size: 30pt;
-  color: blue;
-}
-
-div.test {
-  font-size: 30pt;
-  color: red;
-}
-
 /* color test */
 .mad_red {
   background-color: rgb(221, 47, 82);

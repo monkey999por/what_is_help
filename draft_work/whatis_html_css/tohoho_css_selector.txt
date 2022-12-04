@@ -5,3 +5,11 @@ https://www.tohoho-web.com/css/selector.htm#Combinator
 優先度はめちゃくちゃ高い（よくわからないけど、、）
 
 間を空けない場合は？
+
+https://www.tohoho-web.com/ex/centering.html
+
+https://www.tohoho-web.com/wwwcolor.htm
+https://www.tohoho-web.com/ex/font.html
+https://www.tohoho-web.com/bootstrap5/index.html
+https://www.tohoho-web.com/ex/amp.html
+https://www.tohoho-web.com/bootstrap5/components.html
