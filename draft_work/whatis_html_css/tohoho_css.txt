@@ -48,6 +48,24 @@ https://www.ideee.tech/about
 
 
 
+■疑似クラス
+:hoverとか
+要素の「状態」（※マウスオーバーされたとか、リンクがクリック済みとか）に応じてスタイルを適用
+
+■疑似要素
+::beforeとか
+DOMの特定の要素に対してスタイルを適用
+https://developer.mozilla.org/ja/docs/Web/CSS/Pseudo-elements
+
+
+アニメーションはこのへん？
+https://www.tohoho-web.com/css/prop/transition.htm
+animation-timing-function
+
+HTMLスニペット？とかで調べればいい？
+https://codepen.io/
+https://jsfiddle.net/
+
 
 ■メモ
 div.test { color: red; }

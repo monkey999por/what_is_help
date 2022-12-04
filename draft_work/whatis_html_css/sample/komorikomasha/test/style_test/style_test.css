@@ -26,7 +26,11 @@ h6 {
   color: blue;
 }
 
-div.test {
+div.test:hover {
   font-size: 30pt;
+  color: red;
+}
+
+[id*="aaa"]:hover {
   color: red;
 }
