@@ -9,6 +9,7 @@ https://qiita.com/arowM/items/e1af320e2755461649a0
 Pxはあんまり使わず相対的なサイズを使う。emとか
 
 SCSSは変数使えたり構造化できたりがめちゃくちゃいい @useとかも最高
+⇒lessでもいいのではという気も。簡単そうだし
 カスタムデータ属性の使い方
 アニメーションはCSSでやる方がいいかもって
 npm のpercelとかよさそう？webpackのいろいろ自動でやってくれる版
@@ -45,3 +46,32 @@ CSSには優先度の計算方法があるが、それだと都合が悪いケ�
 https://hackr.io/
 https://www.ideee.tech/about
 
+
+
+
+■メモ
+div.test { color: red; }
+⇒devとtest両方を一つのタグ内で持つ要素。&&と同じ
+　つまり<div class="test"
+
+h1, h2, h3, h4, h5, h6 { color: red; }
+⇒h1~h6すべてに適用。||と同じ
+
+ul li { color: red; }
+⇒ul配下のliに適用
+
+body > div { margin: 10px; }
+⇒body直下のdevに適用
+
+h1 + div { border: 1px solid gray; }
+⇒隣接兄弟セレクタ。
+　<div>スタイルは適用されません。</div>
+　<h1>ヘッダ</h1>
+　<div>スタイルが適用されます。</div>
+　<div>スタイルは適用されません。</div>
+
+h1 ~ div { color: red; }
+⇒<div>スタイルは適用されません。</div>
+　<h1>ヘッダ</h1>
+　<div>スタイルが適用されます。</div>
+　<div>スタイルが適用されます。</div>
