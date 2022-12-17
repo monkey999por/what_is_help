@@ -50,6 +50,18 @@ HTML5ではブロック/インライン要素は廃止されている。ただ�
 https://www.asobou.co.jp/blog/web/html5-3
 https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Content_categories
 
+■主要 7カテゴリ
+メタデータ(meta: 高次の~)
+フロー(body内のページを構成する帆と飲んどの要素)
+セクショニング(section系。)
+ヘッディング(ヘッダ等)
+フレージング(phrasing:表現法.)
+エンベッディッド(embedded:埋め込み)
+インタラクティブ(interactine:対話的)
+
+■その他の分類
+パルパブルコンテンツ (palpable: 明白な)
+
 
 ※パルパブルコンテンツ（フローコンテンツやフレージングコンテンツを子要素に持つことができる要素）
 という分け方もある。。sectionの中にh1を入れられるのはこの仕様のため。
