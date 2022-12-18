@@ -34,3 +34,47 @@ div.test:hover {
 [id*="aaa"]:hover {
   color: red;
 }
+
+.binding ul li {
+  color: red;
+}
+
+.binding ul ul li {
+  color: blue;
+}
+
+.binding ul ul ul li {
+  color: greenyellow;
+}
+
+.child_selector > div {
+  font-size: 10px;
+}
+.sec > p {
+  color: #00ffff;
+}
+h1 ~ div {
+  color: red;
+}
+
+.foot_space {
+  padding-bottom: 50px;
+  border: #00ffff;
+  border-style: dashed;
+  border-radius: 3%;
+}
+.foot_space:empty {
+  background-color: yellowgreen;
+}
+
+#intest:out-of-range {
+  border-color: red;
+}
+
+.c1:nth-child(4) {
+  color: red;
+}
+
+.pesudo_element p::first-line {
+  color: red;
+}

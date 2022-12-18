@@ -65,31 +65,3 @@ animation-timing-function
 HTMLスニペット？とかで調べればいい？
 https://codepen.io/
 https://jsfiddle.net/
-
-
-■メモ
-div.test { color: red; }
-⇒devとtest両方を一つのタグ内で持つ要素。&&と同じ
-　つまり<div class="test"
-
-h1, h2, h3, h4, h5, h6 { color: red; }
-⇒h1~h6すべてに適用。||と同じ
-
-ul li { color: red; }
-⇒ul配下のliに適用
-
-body > div { margin: 10px; }
-⇒body直下のdevに適用
-
-h1 + div { border: 1px solid gray; }
-⇒隣接兄弟セレクタ。
-　<div>スタイルは適用されません。</div>
-　<h1>ヘッダ</h1>
-　<div>スタイルが適用されます。</div>
-　<div>スタイルは適用されません。</div>
-
-h1 ~ div { color: red; }
-⇒<div>スタイルは適用されません。</div>
-　<h1>ヘッダ</h1>
-　<div>スタイルが適用されます。</div>
-　<div>スタイルが適用されます。</div>
