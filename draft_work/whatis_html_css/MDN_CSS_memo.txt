@@ -1,0 +1,20 @@
+■一括指定
+https://developer.mozilla.org/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured#%E4%B8%80%E6%8B%AC%E6%8C%87%E5%AE%9A
+
+```
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 15px;
+padding-left: 5px;
+```
+↓
+```
+padding: 10px 15px 15px 5px;
+
+```
+
+■ブラウザのロードの順番
+CSSに限った話じゃないけど重要
+https://developer.mozilla.org/ja/docs/Learn/CSS/First_steps/How_CSS_works
+
+https://developer.mozilla.org/ja/docs/Learn/CSS/First_steps/How_CSS_works
