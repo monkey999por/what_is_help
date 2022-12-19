@@ -50,6 +50,7 @@ div.test:hover {
 .child_selector > div {
   font-size: 10px;
 }
+
 .sec > p {
   color: #00ffff;
 }
