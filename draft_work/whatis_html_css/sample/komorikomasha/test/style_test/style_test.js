@@ -3,7 +3,7 @@ const footSpace = document.querySelector(".foot_space");
 document.querySelector(".add_footer_element").addEventListener(
   "click",
   (e) => {
-    footSpace.innerHTML = "<p>あるよー</p>";
+    footSpace.innerHTML = "<p class='beautifull_button'>Button</p>";
   },
   false
 );

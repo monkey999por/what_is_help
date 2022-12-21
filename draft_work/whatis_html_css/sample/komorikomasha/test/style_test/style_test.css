@@ -1,5 +1,6 @@
 body {
-  margin: 0px;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
 }
 
 /* tag selector */
@@ -59,13 +60,24 @@ h1 ~ div {
 }
 
 .foot_space {
-  padding-bottom: 50px;
-  border: #00ffff;
-  border-style: dashed;
-  border-radius: 3%;
+  border: orangered;
+  background-color: black;
+  border-style: solid;
+  border-radius: 20vw;
+  margin: 20px;
+  max-width: 20vw;
 }
 .foot_space:empty {
   background-color: yellowgreen;
+  padding: 5vw;
+  border-radius: initial;
+}
+.beautifull_button {
+  color: white;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 #intest:out-of-range {
@@ -78,4 +90,12 @@ h1 ~ div {
 
 .pesudo_element p::first-line {
   color: red;
+}
+
+.overflow_test {
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+  background-color: blueviolet;
+  overflow: scroll;
 }

@@ -12,7 +12,7 @@ CSSは親要素のスタイルを継承する。
 
 
 
-■一括指定
+■一括指定(ショートハンド)
 https://developer.mozilla.org/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured#%E4%B8%80%E6%8B%AC%E6%8C%87%E5%AE%9A
 
 ```
