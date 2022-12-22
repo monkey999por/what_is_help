@@ -99,3 +99,15 @@ h1 ~ div {
   background-color: blueviolet;
   overflow: scroll;
 }
+.box {
+  width: 200px;
+}
+.minibox {
+  width: 50px;
+}
+.width {
+  width: 100%;
+}
+.max {
+  max-width: 100%;
+}
