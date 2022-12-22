@@ -108,3 +108,15 @@ h1 ~ div {
   margin: 10%;
   padding: 10%;
 }
+.box {
+  width: 200px;
+}
+.minibox {
+  width: 50px;
+}
+.width {
+  width: 100%;
+}
+.max {
+  max-width: 100%;
+}
