@@ -99,3 +99,12 @@ h1 ~ div {
   background-color: blueviolet;
   overflow: scroll;
 }
+.sizing_item > img {
+  border: 5px solid darkblue;
+}
+.box {
+  border: 5px solid darkblue;
+  width: 300px;
+  margin: 10%;
+  padding: 10%;
+}

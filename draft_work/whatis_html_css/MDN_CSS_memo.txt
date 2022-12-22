@@ -30,8 +30,3 @@ padding: 10px 15px 15px 5px;
 ■ブラウザのロードの順番
 CSSに限った話じゃないけど重要
 https://developer.mozilla.org/ja/docs/Learn/CSS/First_steps/How_CSS_works
-
-
-
-■ボックスモデル（レイアウト系）
-
