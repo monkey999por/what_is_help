@@ -1,9 +1,16 @@
 const footSpace = document.querySelector(".foot_space");
-
+const footDummy = document.querySelector(".foot_dummy");
+const testCheck = document.querySelector("#test_check");
+const btn = document.getElementsByClassName("btn")[0];
 document.querySelector(".add_footer_element").addEventListener(
   "click",
   (e) => {
-    footSpace.innerHTML = "<p class='beautifull_button'>Button</p>";
+    const btnTemp = btn?.cloneNode(true);
+    if (testCheck.checked) {
+      footSpace.appendChild(btnTemp);
+    } else {
+      footDummy.appendChild(btnTemp);
+    }
   },
   false
 );
@@ -11,7 +18,8 @@ document.querySelector(".add_footer_element").addEventListener(
 document.querySelector(".delete_footer_element").addEventListener(
   "click",
   (e) => {
-    footSpace.children.item(0).remove();
+    footSpace.innerHTML = "";
+    footDummy.innerHTML = "<p>dummy area</p>";
   },
   false
 );

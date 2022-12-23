@@ -60,12 +60,12 @@ h1 ~ div {
 }
 
 .foot_space {
-  border: orangered;
+  /* border: orangered;
   background-color: black;
   border-style: solid;
   border-radius: 20vw;
   margin: 20px;
-  max-width: 20vw;
+  max-width: 20vw; */
 }
 .foot_space:empty {
   background-color: yellowgreen;
@@ -73,11 +73,35 @@ h1 ~ div {
   border-radius: initial;
 }
 .beautifull_button {
-  color: white;
+  /* color: white;
   display: block;
   margin-right: auto;
   margin-left: auto;
+  text-align: center; */
+}
+beautifull_button:hover {
+  background-color: greenyellow;
+}
+.foot_space .btn,
+.foot_dummy .btn {
+  height: 3em;
   text-align: center;
+  border: orangered;
+  background-color: black;
+  border-style: solid;
+  border-radius: 20vw;
+  margin: 20px;
+  max-width: 20vw;
+}
+.btn .btn_text {
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.foot_dummy {
+  padding: 10vw;
+  border: 3px solid black;
 }
 
 #intest:out-of-range {
