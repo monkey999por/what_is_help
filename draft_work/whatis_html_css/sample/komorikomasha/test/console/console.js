@@ -1,19 +1,31 @@
+const commands = [
+  {
+    name: "ssh",
+    // ssh mock
+    func: (args) => {
+      const sshFormat = /[0-9]{3}\.[0-9]{3}\.[0-9]{1,3}\.[0-9]{1,3}@.+/gi;
+      if (sshFormat.test(args)) {
+        console.log("ok");
+      } else {
+        console.log("ng");
+      }
+      const server = document.querySelector(".server");
+      const user = document.querySelector(".user");
+
+      return `login to ${args}`;
+    },
+  },
+];
+
 const commandHistory = [];
 let keyPressCount = 0;
 
+// Main
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    const server = document.querySelector(".server");
-    const user = document.querySelector(".user");
     const input = document.querySelector('input[type="text"]#command');
-    const logs = document.querySelector(".logs");
-
-    server.textContent = "192.168.0.1";
-    user.textContent = "monkey999";
-
     input.focus();
-
     input.addEventListener(
       "keydown",
       (e) => {
@@ -43,7 +55,7 @@ document.addEventListener(
         // Enter押下時
         if (e.keyCode === 13) {
           keyPressCount = 0;
-          runCommand(ssh);
+          runCommand(input.value);
           input.value = "";
         }
         // 一番下にスクロール
@@ -53,36 +65,6 @@ document.addEventListener(
       },
       false
     );
-    /**
-     * コマンドを実行して結果を表示
-     *
-     * @param commandFunc 実行するコマンド
-     * @param args コマンドの引数
-     */
-    const runCommand = (commandFunc) => {
-      // コマンド実行
-      const result = commandFunc(input.value);
-
-      // 履歴の保存
-      // 上ボタン、下ボタンで使う。
-      commandHistory.push(input.value);
-
-      // 結果生成
-      // 実行したコマンド
-      const historyElement = document.createElement("p");
-      historyElement.textContent = `${server.textContent}@${user.textContent}$ ${input.value}`;
-
-      // コマンドの結果
-      const resultElement = document.createElement("p");
-      resultElement.textContent = result;
-
-      const group = document.createElement("div");
-      group.setAttribute("class", "histories");
-
-      group.appendChild(historyElement);
-      group.appendChild(resultElement);
-      logs.appendChild(group);
-    };
 
     // 画面クリックでコマンド入力にフォーカス
     document.addEventListener("click", () => input.focus(), false);
@@ -90,27 +72,45 @@ document.addEventListener(
   false
 );
 
-// const commands = [
-//   {
-//     name: "ssh",
-//     func: ssh,
-//   },
-// ];
-
 /**
- * ssh mock
+ * コマンドを実行して結果を表示
+ *
+ * @param commandFunc 実行するコマンド
+ * @param args コマンドの引数
  */
-const ssh = (args) => {
-  const sshFormat = /[0-9]{3}\.[0-9]{3}\.[0-9]{1,3}\.[0-9]{1,3}@.+/gi;
-  if (sshFormat.test(args)) {
-    console.log("ok");
-  } else {
-    console.log("ng");
-  }
+const runCommand = (inputInfo) => {
+  // コマンド実行
+  const command = commands.filter(
+    (command) => inputInfo.split(" ")[0] === command.name
+  );
+  console.log(command);
+
+  const result = command[0]
+    ? command[0]?.func()
+    : `${inputInfo.split(" ")[0]} is not a command`;
+
+  // 履歴の保存
+  const logs = document.querySelector(".logs");
   const server = document.querySelector(".server");
   const user = document.querySelector(".user");
+  // 上ボタン、下ボタンで使う。
+  commandHistory.push(inputInfo);
 
-  return `login to ${args}`;
+  // 結果生成
+  // 実行したコマンド
+  const historyElement = document.createElement("p");
+  historyElement.textContent = `${server.textContent}@${user.textContent}$ ${inputInfo}`;
+
+  // コマンドの結果
+  const resultElement = document.createElement("p");
+  resultElement.textContent = result;
+
+  const group = document.createElement("div");
+  group.setAttribute("class", "histories");
+
+  group.appendChild(historyElement);
+  group.appendChild(resultElement);
+  logs.appendChild(group);
 };
 
 // 上ボタンで履歴をたどる
