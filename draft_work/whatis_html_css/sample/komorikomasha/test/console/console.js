@@ -22,6 +22,7 @@ const commands = [
     name: "cls",
     func: () => {
       console.log("clear console");
+      document.querySelector(".logs").innerHTML = "";
     },
   },
 ];
