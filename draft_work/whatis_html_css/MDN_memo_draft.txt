@@ -32,8 +32,10 @@ overflow-x,overflow-y ※軸方向のみ
 ・パーセント指定：基本的に親要素のサイズに対して何%か
 ・max-width, min-width
 
-■
-
+■画像・メディア・フォーム要素　https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements
+・画像はobject-fitでサイズ調整する
+・
+・
 
 ★CSSの問題集的な
 https://code-step.com/level-beginner/

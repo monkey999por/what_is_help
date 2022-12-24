@@ -1,3 +1,6 @@
+// APIたたいてみたい
+//resultを改行させる
+
 const commands = [
   {
     // example : ssh 111.221.1.1@usert
@@ -23,6 +26,20 @@ const commands = [
     func: () => {
       console.log("clear console");
       document.querySelector(".logs").innerHTML = "";
+    },
+  },
+  {
+    name: "dummy",
+    func: () => {
+      return "ああああああああああ<br>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ";
+    },
+  },
+  {
+    name: "exit",
+    func: () => {
+      if (confirm("logout?")) {
+        location.href = "/";
+      }
     },
   },
 ];
@@ -91,6 +108,7 @@ document.addEventListener(
 const runCommand = (inputInfo) => {
   // コマンド実行
   const [inputCommandName, args] = inputInfo.split(/(?<=^[^\s]+)\s/);
+  console.log(inputCommandName);
   const command = commands.filter(
     (command) => inputCommandName === command.name
   );
