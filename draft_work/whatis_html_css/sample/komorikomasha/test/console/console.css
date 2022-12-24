@@ -1,0 +1,26 @@
+html {
+  background-color: black;
+  color: white;
+}
+
+input[type="text"]#command {
+  color: white;
+  border: none;
+  outline: none;
+  background-color: black;
+  width: 50%;
+}
+
+.logs > div {
+  margin-bottom: 1em;
+}
+.logs > div > p {
+  margin: 0;
+}
+
+input[type="text"]#command:active {
+  /* color: white;
+  outline: none;
+  border: none;
+  background-color: black; */
+}
