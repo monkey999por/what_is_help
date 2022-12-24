@@ -9,6 +9,8 @@ input[type="text"]#command {
   outline: none;
   background-color: black;
   width: 50%;
+  font-size: initial;
+  font-family: initial;
 }
 
 .logs > div {
@@ -23,4 +25,9 @@ input[type="text"]#command:active {
   outline: none;
   border: none;
   background-color: black; */
+}
+
+.histories:hover {
+  background-color: gray;
+  transition-duration: 100ms;
 }
