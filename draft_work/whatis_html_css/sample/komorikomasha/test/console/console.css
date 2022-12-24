@@ -28,6 +28,6 @@ input[type="text"]#command:active {
 }
 
 .histories:hover {
-  background-color: gray;
-  transition-duration: 100ms;
+  /* background-color: gray;
+  transition-duration: 100ms; */
 }

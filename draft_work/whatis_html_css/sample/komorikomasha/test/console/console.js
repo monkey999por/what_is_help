@@ -1,18 +1,27 @@
 const commands = [
   {
+    // example : ssh 111.221.1.1@usert
     name: "ssh",
     // ssh mock
     func: (args) => {
+      console.log(args);
       const sshFormat = /[0-9]{3}\.[0-9]{3}\.[0-9]{1,3}\.[0-9]{1,3}@.+/gi;
-      if (sshFormat.test(args)) {
-        console.log("ok");
-      } else {
-        console.log("ng");
+      if (!sshFormat.test(args)) {
+        return `access rejected`;
       }
       const server = document.querySelector(".server");
       const user = document.querySelector(".user");
 
+      server.textContent = args.split("@")[0];
+      user.textContent = args.split("@")[1];
+
       return `login to ${args}`;
+    },
+  },
+  {
+    name: "cls",
+    func: () => {
+      console.log("clear console");
     },
   },
 ];
@@ -80,14 +89,14 @@ document.addEventListener(
  */
 const runCommand = (inputInfo) => {
   // コマンド実行
+  const [inputCommandName, args] = inputInfo.split(/(?<=^[^\s]+)\s/);
   const command = commands.filter(
-    (command) => inputInfo.split(" ")[0] === command.name
+    (command) => inputCommandName === command.name
   );
-  console.log(command);
 
   const result = command[0]
-    ? command[0]?.func()
-    : `${inputInfo.split(" ")[0]} is not a command`;
+    ? command[0]?.func(args)
+    : `${inputCommandName} is not a command`;
 
   // 履歴の保存
   const logs = document.querySelector(".logs");
@@ -112,6 +121,3 @@ const runCommand = (inputInfo) => {
   group.appendChild(resultElement);
   logs.appendChild(group);
 };
-
-// 上ボタンで履歴をたどる
-// コマンドの一つ目で関数を特定
