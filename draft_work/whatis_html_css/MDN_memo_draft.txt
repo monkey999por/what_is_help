@@ -43,8 +43,20 @@ overflow-x,overflow-y ※軸方向のみ
 ・table-layout: fixedを使う
 ・サンプルで作ったのそのままマネするのがいいかも。豹のパターンなんてこんなもんだし
 
+■CSS のデバッグ　https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS
+・バリデータがある（https://jigsaw.w3.org/css-validator/）
 
+■CSS の整理　https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Organizing
+・過剰なセレクターを避けるのが一般的らしい（article.main p.boxじゃなくて、.boxで指定）
+・SASS使え（素のCSSはそもそも推奨されてない？）
+
+
+
+
+■カスタムプロパティ？CSSの変数がでふぉるとでサポートされる　https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
 ★CSSの問題集的な
+https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
+https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 https://code-step.com/level-beginner/
 https://yellowlab.tools/
 https://qiita.com/teradonburi/items/5b8f79d26e1b319ac44f#%E3%82%A2%E3%83%AD%E3%83%BC%E9%96%A2%E6%95%B0%E3%82%92props%E3%81%AB%E5%8D%B3%E6%99%82%E9%96%A2%E6%95%B0%E3%81%A7%E6%B8%A1%E3%81%99
