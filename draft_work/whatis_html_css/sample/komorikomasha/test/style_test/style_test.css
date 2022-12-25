@@ -321,3 +321,14 @@ tbody tr {
 .table_sample td {
   padding: 20px;
 }
+ul,
+body {
+  /* padding: 0;
+  margin: 0; */
+}
+li {
+  max-width: 100%;
+  /* content:  url("./img/star.png");*/
+  /* list-style-image: url("./img/star.png"); */
+  list-style-type: upper-roman;
+}

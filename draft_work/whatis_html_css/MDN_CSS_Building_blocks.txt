@@ -50,9 +50,6 @@ overflow-x,overflow-y ※軸方向のみ
 ・過剰なセレクターを避けるのが一般的らしい（article.main p.boxじゃなくて、.boxで指定）
 ・SASS使え（素のCSSはそもそも推奨されてない？）
 
-
-
-
 ■カスタムプロパティ？CSSの変数がでふぉるとでサポートされる　https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
 ★CSSの問題集的な
 https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
