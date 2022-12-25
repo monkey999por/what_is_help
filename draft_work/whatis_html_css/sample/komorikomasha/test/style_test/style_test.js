@@ -1,4 +1,4 @@
-const footSpace = document.querySelector(".foot_space");
+const footSpace = document.querySelector(".foot_space.button_area");
 const footDummy = document.querySelector(".foot_dummy");
 const testCheck = document.querySelector("#test_check");
 const btn = document.getElementsByClassName("btn")[0];

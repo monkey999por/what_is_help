@@ -113,9 +113,8 @@ const runCommand = (inputInfo) => {
     (command) => inputCommandName === command.name
   );
 
-  const result = command[0]
-    ? command[0]?.func(args)
-    : `${inputCommandName} is not a command`;
+  const result = command[0] ? command[0]?.func(args) : eval(inputInfo);
+  // : `${inputCommandName} is not a command`;
 
   // 履歴の保存
   const logs = document.querySelector(".logs");
