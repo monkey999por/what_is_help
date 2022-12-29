@@ -113,7 +113,17 @@ const runCommand = (inputInfo) => {
     (command) => inputCommandName === command.name
   );
 
-  const result = command[0] ? command[0]?.func(args) : eval(inputInfo);
+  const result = command[0]
+    ? command[0]?.func(args)
+    : (() => {
+        try {
+          eval(inputInfo);
+        } catch (e) {
+          console.log(e);
+        } finally {
+          return "run eval";
+        }
+      })();
   // : `${inputCommandName} is not a command`;
 
   // 履歴の保存

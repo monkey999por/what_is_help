@@ -41,7 +41,7 @@ overflow-x,overflow-y ※軸方向のみ
 ・<thead>、<tbody>、<tfoot>で部分ごとに分ける
 ・border-collapse: collapseを使う（枠線の部分）
 ・table-layout: fixedを使う
-・サンプルで作ったのそのままマネするのがいいかも。豹のパターンなんてこんなもんだし
+・サンプルで作ったのそのままマネするのがいいかも。表のパターンなんてこんなもんだし
 
 ■CSS のデバッグ　https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS
 ・バリデータがある（https://jigsaw.w3.org/css-validator/）
