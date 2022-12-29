@@ -11,6 +11,7 @@ input[type="text"]#command {
   width: 50%;
   font-size: initial;
   font-family: initial;
+  padding-left: 0;
 }
 
 .logs > div {
