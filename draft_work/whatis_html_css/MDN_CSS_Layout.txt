@@ -1,13 +1,6 @@
 ■CSS レイアウト https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout
-★Flex(一次元:縦or横)
-・display: flex;  親要素に指定することで配下の要素をflexboxとして扱える
-・flex-direction: column, row ⇒ flexboxの要素の方向
-・align-items: flex-end, center ⇒flexboxの位置
-★Box(二次元:縦横)
-・grid-template-rows 
-・grid-template-columns
-・grid-column 
-・grid-row 
+
+
 ★位置指定(position)https://developer.mozilla.org/ja/docs/Web/CSS/position
 ・position: relative; 元の位置に対して相対的（top,right,left,bottomで指定）
 ・position: absolute;　ビューポート（基本的にbody）に対して「相対」的。直近の親要素にposition: relativeを指定すると直近の親要素に対して「相対」的
@@ -18,15 +11,29 @@
 デフォルトでは、ブロックレベル要素のコンテンツは、その親要素の幅の 100% で、そのコンテンツと同じ高さです インライン要素は、コンテンツと同じ高さで、コンテンツと同じ幅です。インライン要素に幅や高さを設定することはできません — それらはブロックレベル要素のコンテンツの中にあるだけです。この方法でインライン要素のサイズを制御したい場合は、display: block; を使用してブロックレベル要素のようにふるまうように設定する必要があります (あるいは、display: inline-block; で、両方の特性を混在させます)。
 
 
-■フレックスボックス https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Flexbox
+TODO: ■フレックスボックス https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Flexbox
+★Flex(一次元:縦or横)
+・display: flex;  親要素に指定することで配下の要素をflexitemとして扱える
+・flex-direction: column, row ⇒ flexboxの要素の方向
+・flex-wrap: wrap; 
+flex-flow: row wrap; flex-directionとflex-wrapのショートハンド
+・align-items: flex-end, center ⇒flexboxの位置
+・。。。。
 
-■グリッド　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Grids
+TODO: ■グリッド　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Grids
+★Box(二次元:縦横)
+・grid-template-rows 
+・grid-template-columns
+・grid-column 
+・grid-row 
 
-■フロート　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Floats
+TODO: ■フロート　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Floats
 
-■位置指定　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Positioning
 
-■段組みレイアウト　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout
+
+TODO: ■位置指定　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Positioning
+
+TODO: ■段組みレイアウト　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout
 
 ■レスポンシブデザイン　https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 ★いろんな手法がある

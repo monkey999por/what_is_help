@@ -99,3 +99,29 @@
 .multiple_column .container {
   column-width: 200px;
 }
+
+.link {
+  border: 1px solid black;
+}
+.link > a {
+  margin: 1%;
+  display: block;
+  border-collapse: collapse;
+  border: 1px solid blueviolet;
+}
+.link > a::before {
+  content: "★";
+}
+.link > a::after {
+  content: "⤴";
+}
+.float .box {
+  float: left;
+
+  margin-right: 15px;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
