@@ -9,7 +9,7 @@
 ・text-shadow (影つけれる)
 ★テキストのレイアウト
 ・text-align(位置)
-・line-height（各行の高さ）
+・line-height（各行の高さ） ※文字サイズに対する文字の高さの比率で指定するのが一般的
 ・letter-spacing（文字ごとの幅）
 ・word-spacing（単語ごとの幅）
 ・
