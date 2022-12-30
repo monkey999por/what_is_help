@@ -1,7 +1,70 @@
+/* dummy */
+.sampleHead {
+  background: #333;
+  padding: 10px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sampleHead h1 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.375;
+  float: left;
+}
+
 body {
   color: #333333;
   font-family: sans-serif;
   /* overflow: hidden; */
+}
+
+#globalNavi {
+  border: solid #cccccc;
+  border-width: 1px 0;
+  padding: 10px 0;
+}
+
+/* 上のナビゲーションリンク */
+#globalNavi ul {
+  margin: 0;
+}
+/* clear fix */
+#globalNavi ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* ★これでリストの横並びができる */
+#globalNavi li {
+  list-style-type: none;
+  /* Bodyの幅を④等分 */
+  width: 245px;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.429;
+  border-left: 1px solid #cccccc;
+  padding: 0 10px;
+}
+#globalNavi li a:hover {
+  background-color: #f2f2e5;
+}
+#globalNavi li a.current {
+  background-color: #f2f2e5;
+}
+#globalNavi ul li:first-child {
+  border-left: none;
+}
+
+#globalNavi li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
 }
 
 #page {
@@ -90,7 +153,6 @@ p {
 #pageBodyMain ul li {
   font-size: 14px;
   list-style-type: square;
-  list-style-position: inside;
   line-height: 1.429;
 }
 
@@ -130,6 +192,7 @@ p {
   font-size: 30px;
   line-height: 1.2;
   text-shadow: #349fa6;
+  font-family: "Antic Didone", serif;
 }
 
 #pageHead #catchcopy {
@@ -178,10 +241,35 @@ a {
 a:hover {
   color: #999900;
 }
+
+#otherMakes {
+  margin-bottom: 16px;
+}
 #otherMakes ul {
   margin-left: 21px;
+}
+
+#otherMakes li {
+  font-size: 14px;
+  line-height: 1.429;
+  list-style-type: square;
 }
 /* sanitize.cssを上書き */
 nav li {
   list-style-type: initial;
+}
+
+.toPageTop {
+  font-size: 12px;
+
+  text-align: right;
+  width: 720px;
+}
+.toPageTop::after {
+  content: "⤴";
+  color: #999999;
+}
+
+.toPageTop a {
+  text-decoration: none;
 }

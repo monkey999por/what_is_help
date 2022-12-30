@@ -76,22 +76,38 @@ document.addEventListener(
   "DOMContentLoaded",
   () => {
     /**
+     * 一番上のヘッダ生成
+     */
+    const sampleHead = document.querySelector(".sampleHead");
+    sampleHead.innerHTML =
+      "<h1> HTML / CSS design textbook sample to learn while making</h1>";
+
+    /**
      * ヘッダのコンテンツを追加
      */
     const headerItem = document.querySelector("#headerItem");
     headerItem.innerHTML += `
     <header id="pageHead">
-       <h1 id="siteTitle">komorikomasha(h1)</h1>
+       <h1 id="siteTitle">komorikomasha</h1>
       <p id="catchcopy">What we cannot do alone, we can do together. 3 fun creations that give shape
         to
         what you want to try.</p>
     </header>
     <nav id="globalNavi">
         <ul>
-            <li><a href="${globalNavilinks.home}">home</a></li>
-            <li><a href="${globalNavilinks.aboutMe}">about we</a></li>
-            <li><a href="${globalNavilinks.portfolios}">portfolios</a></li>
-            <li><a href="${globalNavilinks.contact}">contact</a></li>
+            <li><a ${
+              globalNavilinks.home === pagePath ? 'class="current"' : ""
+            } href="${globalNavilinks.home}">home</a></li>
+
+            <li><a ${
+              globalNavilinks.aboutMe === pagePath ? 'class="current"' : ""
+            } href="${globalNavilinks.aboutMe}">about we</a></li>
+            <li><a ${
+              globalNavilinks.portfolios === pagePath ? 'class="current"' : ""
+            } href="${globalNavilinks.portfolios}">portfolios</a></li>
+            <li><a ${
+              globalNavilinks.contact === pagePath ? 'class="current"' : ""
+            } href="${globalNavilinks.contact}">contact</a></li>
         </ul>
     </nav>`;
 
