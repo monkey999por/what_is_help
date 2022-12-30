@@ -157,7 +157,7 @@ document.addEventListener(
     if (pagePath !== globalNavilinks.home) {
       const newsList = document.querySelector("#pageBodySub .newsList");
       newsList.innerHTML = `
-    <h2>news(h2)</h2>
+    <h2>News</h2>
     <ul>
         <li>
             <time datetime="2013-10-01">2013/10/1</time>

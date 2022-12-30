@@ -274,3 +274,61 @@ nav li {
 .toPageTop a {
   text-decoration: none;
 }
+
+/* 記事一覧 */
+.articleList {
+  border: 1px solid #cccccc;
+  margin-bottom: 25px;
+}
+
+.articleList a {
+  display: block;
+  padding: 10px;
+}
+
+.articleListText {
+  width: 370px;
+  float: right;
+}
+.articleListText h1 {
+  font-size: 26px;
+  line-height: 1.308;
+}
+
+.articleListText p {
+  font-size: 14px;
+  line-height: 1.429;
+}
+.articleListImage {
+  width: 300px;
+  float: left;
+}
+
+/* 画像の下の余白削除 */
+.articleListImage img {
+  vertical-align: bottom;
+}
+
+/* clear fix TODO: save snippet */
+.articleList a::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.articleList a:hover {
+  opacity: 0.7;
+}
+/* テキストのオーバーフローのテンプレ */
+.text-overflow-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.imageContiner {
+  text-align: center;
+  border-bottom: 1px dotted #cccccc;
+  padding-bottom: 30px;
+  margin: 30px 0;
+}
