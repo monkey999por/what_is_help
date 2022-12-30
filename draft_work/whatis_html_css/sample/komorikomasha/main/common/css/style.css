@@ -253,6 +253,7 @@ a:hover {
   font-size: 14px;
   line-height: 1.429;
   list-style-type: square;
+  margin-bottom: 12px;
 }
 /* sanitize.cssを上書き */
 nav li {

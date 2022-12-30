@@ -103,7 +103,7 @@ document.addEventListener(
               globalNavilinks.aboutMe === pagePath ? 'class="current"' : ""
             } href="${globalNavilinks.aboutMe}">about we</a></li>
             <li><a ${
-              globalNavilinks.portfolios === pagePath ? 'class="current"' : ""
+              pagePath.match(/portfolio/g) ? 'class="current"' : ""
             } href="${globalNavilinks.portfolios}">portfolios</a></li>
             <li><a ${
               globalNavilinks.contact === pagePath ? 'class="current"' : ""
