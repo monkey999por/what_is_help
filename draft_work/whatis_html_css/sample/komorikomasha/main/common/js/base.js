@@ -69,7 +69,11 @@ const pagePath = location.pathname;
  * @returns {@PAGE_INFO[n].item}
  */
 const getPageInfo = (path) => {
-  return PAGE_INFO.filter((o) => o.path === (path ? path : pagePath))[0]?.item;
+  const item = PAGE_INFO.filter((o) => o.path === (path ? path : pagePath))[0]
+    ?.item;
+  return item
+    ? item
+    : PAGE_INFO.filter((o) => o.path === globalNavilinks.home)[0]?.item;
 };
 
 const isRoot = () => {
