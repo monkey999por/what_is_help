@@ -365,6 +365,7 @@ nav li {
 .mainVisual {
   /* 絶対一の基準を変更 */
   position: relative;
+  margin-bottom: 40px;
 }
 
 .mainVisualText {
@@ -394,4 +395,59 @@ nav li {
 
 .mainVisual img {
   vertical-align: bottom;
+}
+
+.portfolioIndex::after {
+  /* crear fix */
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.portfolioIndex article {
+  width: 300px;
+  float: left;
+}
+
+.portfolioIndex article:nth-child(n + 2) {
+  margin-left: 40px;
+}
+
+.portfolioIndex h2 {
+  font-size: 21px;
+  line-height: 1.231;
+  margin: 0;
+  height: 1.3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.portfolioIndex p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+#pageBody .news table {
+  min-width: 100%;
+}
+
+#pageBody .news table th,
+#pageBody .news table td {
+  font-size: 14px;
+  line-height: 1.429;
+  padding: 10px;
+  vertical-align: top;
+}
+
+#pageBody .news table th {
+  white-space: nowrap;
+  padding-right: 30px;
+}
+#pageBody .news table tr {
+  border-bottom: 1px dotted #cccccc;
+}
+#pageBody h2 {
+  padding-bottom: 0;
 }

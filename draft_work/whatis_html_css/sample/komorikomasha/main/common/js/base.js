@@ -76,6 +76,11 @@ document.addEventListener(
   "DOMContentLoaded",
   () => {
     /**
+     * create page title
+     */
+    document.querySelector("head title").innerText = getPageInfo().title;
+
+    /**
      * 一番上のヘッダ生成
      */
     const sampleHead = document.querySelector(".sampleHead");
