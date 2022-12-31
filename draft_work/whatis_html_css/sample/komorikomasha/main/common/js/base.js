@@ -27,7 +27,7 @@ const PAGE_INFO = [
   {
     path: globalNavilinks.portfolios,
     item: {
-      title: "Make As",
+      title: "Portfolios",
       breadcrumb: [globalNavilinks.home],
     },
   },
@@ -101,7 +101,7 @@ document.addEventListener(
 
             <li><a ${
               globalNavilinks.aboutMe === pagePath ? 'class="current"' : ""
-            } href="${globalNavilinks.aboutMe}">about we</a></li>
+            } href="${globalNavilinks.aboutMe}">about me</a></li>
             <li><a ${
               pagePath.match(/portfolio/g) ? 'class="current"' : ""
             } href="${globalNavilinks.portfolios}">portfolios</a></li>
