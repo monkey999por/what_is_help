@@ -114,27 +114,29 @@ document.addEventListener(
     /**
      * パンくずリストを表示
      */
-    const topicPath = document.querySelector(".topicPath");
-    // TODO: auto create link
-    const linkContent = "";
-    let breadcrumbStr = "";
+    if (pagePath !== globalNavilinks.home) {
+      const topicPath = document.querySelector(".topicPath");
+      // TODO: auto create link
+      const linkContent = "";
+      let breadcrumbStr = "";
 
-    const crumbLists = getPageInfo().breadcrumb;
-    crumbLists.forEach((path, index) => {
-      const title = getPageInfo(path)?.title;
-      breadcrumbStr += `<a href="${path}">${title}</a> ${
-        crumbLists.length > index ? "&gt;" : ""
-      } `;
-    });
-    breadcrumbStr += getPageInfo().title;
-    topicPath.innerHTML = breadcrumbStr;
-
+      const crumbLists = getPageInfo().breadcrumb;
+      crumbLists.forEach((path, index) => {
+        const title = getPageInfo(path)?.title;
+        breadcrumbStr += `<a href="${path}">${title}</a> ${
+          crumbLists.length > index ? "&gt;" : ""
+        } `;
+      });
+      breadcrumbStr += getPageInfo().title;
+      topicPath.innerHTML = breadcrumbStr;
+    }
     /**
      * add page title
      */
-    const pageTitle = document.querySelector(".pageTitle");
-    pageTitle.textContent = `${getPageInfo()?.title}`;
-
+    if (pagePath !== globalNavilinks.home) {
+      const pageTitle = document.querySelector(".pageTitle");
+      pageTitle.textContent = `${getPageInfo()?.title}`;
+    }
     /**
      * 他に作ったもののリンクを追加
      */

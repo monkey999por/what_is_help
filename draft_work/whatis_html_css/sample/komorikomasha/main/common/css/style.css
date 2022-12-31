@@ -360,3 +360,38 @@ nav li {
 .articleDetail .border {
   border-bottom: 1px solid #cccccc;
 }
+
+/* 配置② */
+.mainVisual {
+  /* 絶対一の基準を変更 */
+  position: relative;
+}
+
+.mainVisualText {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 400px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+
+  /* 配置① */
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.mainVisualText h1 {
+  font-size: 26px;
+  line-height: 1.231;
+  margin: 0;
+}
+
+.mainVisualText p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.mainVisual img {
+  vertical-align: bottom;
+}
