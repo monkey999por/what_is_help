@@ -72,6 +72,10 @@ const getPageInfo = (path) => {
   return PAGE_INFO.filter((o) => o.path === (path ? path : pagePath))[0]?.item;
 };
 
+const isRoot = () => {
+  return pagePath === globalNavilinks.home || pagePath === "/";
+};
+
 document.addEventListener(
   "DOMContentLoaded",
   () => {
@@ -100,9 +104,9 @@ document.addEventListener(
     </header>
     <nav id="globalNavi">
         <ul>
-            <li><a ${
-              globalNavilinks.home === pagePath ? 'class="current"' : ""
-            } href="${globalNavilinks.home}">home</a></li>
+            <li><a ${isRoot() ? 'class="current"' : ""} href="${
+      globalNavilinks.home
+    }">home</a></li>
 
             <li><a ${
               globalNavilinks.aboutMe === pagePath ? 'class="current"' : ""
@@ -119,7 +123,7 @@ document.addEventListener(
     /**
      * パンくずリストを表示
      */
-    if (pagePath !== globalNavilinks.home) {
+    if (!isRoot()) {
       const topicPath = document.querySelector(".topicPath");
       // TODO: auto create link
       const linkContent = "";
@@ -138,7 +142,7 @@ document.addEventListener(
     /**
      * add page title
      */
-    if (pagePath !== globalNavilinks.home) {
+    if (!isRoot()) {
       const pageTitle = document.querySelector(".pageTitle");
       pageTitle.textContent = `${getPageInfo()?.title}`;
     }
@@ -146,7 +150,7 @@ document.addEventListener(
      * 他に作ったもののリンクを追加
      */
     if (
-      pagePath !== globalNavilinks.home &&
+      !isRoot() &&
       pagePath !== globalNavilinks.aboutMe &&
       pagePath !== globalNavilinks.contact
     ) {
@@ -161,7 +165,7 @@ document.addEventListener(
     /**
      * サイドのニュースリストを追加
      */
-    if (pagePath !== globalNavilinks.home) {
+    if (!isRoot()) {
       const newsList = document.querySelector("#pageBodySub .newsList");
       newsList.innerHTML = `
     <h2>News</h2>

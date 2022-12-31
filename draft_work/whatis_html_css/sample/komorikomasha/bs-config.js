@@ -3,7 +3,7 @@ module.exports = {
   server: {
     //デフォルトで開くファイルを指定
     baseDir: "./main/", //ファイルまでのディレクトリのパス
-    index: "dummy.html", //ファイル名
+    index: "index.html", //ファイル名
   },
   proxy: false,
   port: 8000, //使用するポート番号
