@@ -15,3 +15,6 @@ npm i sass
 useage
 sass style.scss:style.css
 
+■typescript
+コンパイル
+tsc sample.ts
