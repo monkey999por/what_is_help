@@ -1,0 +1,57 @@
+★直近----------------------------------------------------
+■デザイン系
+
+6. 問題集的な（模写コーディングとかいうのもあるらしい）
+7.とほほのアニメーション、スクロール、トランスフォームは見たいかも
+https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+https://dev.oro.com/posts/2017/09/design/css_3d/
+7. 作っていく
+https://ics.media/entry/11172/
+https://ics.media/entry/19765/
+
+
+■typescript, SASS導入, pug
+・導入⇒draft_work
+    →OK
+
+■javascript
+・https://developer.mozilla.org/ja/docs/Learn/JavaScript/Asynchronous
+・javascriptのクライアントサイドAPIについて
+  →what_is_javascriptで
+・https://ics.media/entry/19765/
+　⇒ここに○○したい。が書いてあるので実際に便利そうなものはコンポーネント化したい
+
+
+★Next.js + typescript + sass + animationでサイトを作成
+
+
+
+■スマホアプリ作成
+
+■英語の勉強
+・本のやつ
+・chatGPTで会話
+・音声会話したい
+・英語のプレフィックスによる分類調べてみたい
+　-ness , fitness とか
+
+
+■習慣系
+linuxをデフォルトで使う環境にしたい
+　
+★大局的-------------------------------------
+■転職系
+・転職サイト登録？
+・面接の練習。というか喋る練習的な
+
+■副業系
+・youtube?
+・株、仮想通貨
+・ほかにもいろいろある？実際の事例とか調べたい
+　⇒discord, というか普段使わない媒体やチャンネルで調べるのが一番いいね
+
+
+
+
+
+
