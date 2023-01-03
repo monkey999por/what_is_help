@@ -1,0 +1,73 @@
+$diceSize: 150px;
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+}
+#ui {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  perspective: 400px;
+  filter: drop-shadow($diceSize * 2 0px 0px #fff);
+  transform: translateX(-$diceSize);
+  
+  .dice {
+    transform-style: preserve-3d;
+    animation: rotate 10000ms linear infinite;
+    
+    &_list {
+      transform: translateY(-$diceSize / 2) translateX(-$diceSize / 2);
+      transform-style: preserve-3d;
+    }
+    
+    &_item {
+      position: absolute;
+      width: $diceSize;
+      height: $diceSize;
+      background: rgba(255, 100, 100, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 7rem;
+      font-family: 'Dosis', sans-serif;
+      color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px; 
+      border: 10px double rgba(255, 255, 255, 0.6);
+
+      &[data-id='1'] {
+      transform: translateZ($diceSize / 2);
+      }
+    &[data-id='2'] {
+      transform: translateY($diceSize / 2) rotateX(270deg);
+      }
+    &[data-id='3'] {
+      transform: translateX($diceSize / 2) rotateY(-270deg);
+      }
+    &[data-id='4'] {
+      transform: translateX(-$diceSize / 2) rotateY(-90deg);
+        }
+    &[data-id='5'] {
+      transform: translateY(-$diceSize / 2) rotateX(90deg);
+        }
+    &[data-id='6'] {
+      transform: translateZ(-$diceSize / 2) rotateY(180deg);
+        text-decoration: underline;
+        }
+}
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(720deg);
+  }
+}
