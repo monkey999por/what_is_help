@@ -23,7 +23,9 @@ https://ics.media/entry/19765/
 
 
 ★Next.js + typescript + sass + animationでサイトを作成
-
+https://qiita.com/cheez921/items/af5878b0c6db376dbaf0
+https://qiita.com/soarflat/items/b9d3d17b8ab1f5dbfed2
+https://maku.blog/p/4is2ahp/
 
 
 ■スマホアプリ作成
