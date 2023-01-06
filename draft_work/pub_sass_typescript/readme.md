@@ -1,7 +1,7 @@
 
-■pugインストール
 npm init -y
 
+■pugインストール
 npm install pug-cli -D
 
 実行

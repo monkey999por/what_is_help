@@ -10,23 +10,47 @@ https://ics.media/entry/11172/
 https://ics.media/entry/19765/
 
 
-■typescript, SASS導入, pug
-・導入⇒draft_work
-    →OK
-
 ■javascript
 ・https://developer.mozilla.org/ja/docs/Learn/JavaScript/Asynchronous
 ・javascriptのクライアントサイドAPIについて
   →what_is_javascriptで
 ・https://ics.media/entry/19765/
 　⇒ここに○○したい。が書いてあるので実際に便利そうなものはコンポーネント化したい
+・これはサーバ側作るときに意識しとかないといけないね
+https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34
+　⇒OK
+
 
 
 ★Next.js + typescript + sass + animationでサイトを作成
+★とりあえず適当なサイトでfirst deployまでやる
+　・CSSアーキテクチャ
+　https://hackmd.io/@oikaze-next/HJL1QUmP9
+　・Next.jsデザインパターン
+　
+　
+　
+　
+　
 
-
+■typescript
+　⇒サバイバルtypescript
+■SCSS　とりあえずいらない？
 
 ■スマホアプリ作成
+react native
+　⇒こっちは全部コードだけで書く
+android studio
+　⇒こっちはanroid studioをマウスぽちぽちである程度デザイン作れる。
+unity
+　⇒3Dもいける。ただし基本的にC#がベース？
+　
+　いったん↑の3個は触ってみてどうかってとこかな
+　完全に趣味だからやりながら必要なことだけ覚えればいいしそんなにストレスにはならなそう。
+
+　ゲームの場合はunityがいいのかな・・・
+　
+　
 
 ■英語の勉強
 ・本のやつ
