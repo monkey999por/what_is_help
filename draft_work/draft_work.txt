@@ -22,13 +22,25 @@ https://coliss.com/articles/build-websites/operation/css/css-border-animations.h
 　・https://ics.media/entry/19765/
 　⇒ここに○○したい。が書いてあるので実際に便利そうなものはコンポーネント化したい
 
-■webpack?
 
 ■Next.jsのインターセプト　
 https://zenn.dev/takepepe/articles/nextjs-msw-hof
 ■UIデザインツール　
 便利すぎる・・・
 https://web-kanji.com/posts/ui-design-compare
+
+
+★★★★★★★★
+
+apacheにSSL
+openSSL
+Spring boot でAPI　→　raspiにデプロイ
+ログ監視とログローテもやりたい
+
+typescript
+
+★★★★★★★★
+
 
 
 ■スマホアプリ作成
