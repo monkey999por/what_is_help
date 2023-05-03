@@ -1,3 +1,5 @@
+"jjでi mode解除
+inoremap <silent> jj <ESC>
 "行番号を表示
 set number
 "シンタックスハイライトをon
