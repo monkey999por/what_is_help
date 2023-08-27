@@ -53,15 +53,22 @@ https://english.005net.com/youten.php
 https://e-grammar.info/subjunctive/
 ★英語で日記をつけるのはありかも。
 　⇒手書きで書いた後に、Googleレンズ(検索のカメラマーク)から文字起こしできる。それをGrammary(https://www.grammarly.com/)で校閲
+　
 
+高校レベル
+https://choidebu.com/bunpou/hs/
+https://englishosaru-officialsite.co.jp/englishosarublog/high-school-grammar/
+https://www.youtube.com/watch?v=BegXZFcipUc&list=PLuwgA-F4fAEtaR2KnEFhttJCZejeP8_Xo&index=10&ab_channel=%E8%8B%B1%E8%AA%9E%E3%82%B3%E3%83%BC%E3%83%81-%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%E3%81%8A%E3%81%95%E3%82%8B
 
+キーワードとか
 ★品詞の見分け方は？
 ★単数、複数とは
 ★時制について(現在形、過去形、現在進行形、過去進行形)
   ⇒これの図がいい（https://howto-komarigoto.work/entry/21_tense#gsc.tab=0）
-
+★時制（過去/現在/未来）https://wam.onl/notes/notes-2180/
 
 
 GPT用
+- 素朴な疑問質問集：https://chat.openai.com/c/60a9056d-2167-4d0a-901a-45614fd562c2
 - ~について英語で語りましょう
 - 
