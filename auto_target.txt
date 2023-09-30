@@ -1,0 +1,15 @@
+count = setInterval(
+function(){
+var buttons = document.getElementsByClassName("button Lts($ls-s) Z(0) CenterAlign Mx(a) Cur(p) Tt(u) Bdrs(50%) P(0) Fw($semibold) focus-button-style Bxsh($bxsh-btn) Expand Trstf(e) Trsdu($normal) Wc($transform) Pe(a) Scale(1.1):h Scale(.9):a Bgc($c-like-green):a");
+buttons[0].click()
+var closeButton = document.getElementsByClassName("Pt(20px) Pb(40px) C(#fff) Fw($bold) Tt(u) Lts($ls-s) D(b) W(100%) Trsdu($slow)");
+if(closeButton[0]) {
+    closeButton[0].click();
+    buttons[1].click()
+}
+var back = document.getElementsByClassName("button Lts($ls-s) Z(0) CenterAlign Mx(a) Cur(p) Tt(u) Ell Bdrs(100px) Px(24px) Px(20px)--s Py(0) Mih(40px) C($c-secondary) C($c-base):h Fw($semibold) focus-button-style D(b) Mx(a)")
+if(back[0]) {
+    back[0].click()
+    buttons[1].click()
+}
+},1000)

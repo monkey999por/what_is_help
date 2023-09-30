@@ -1,0 +1,329 @@
+## これだけ知っておけばgitには困らない
+普通に開発する分ならここに記載したコマンド群だけ使っていれば生きていけます（自分調べ）。
+随時更新　※Tips部分が増やしていく予定
+
+## 想定環境
+OS: windows
+git version 2.37.3.windows.1
+remote: github
+github-flowを使用（forkしてPull Requestする運用方法）
+github-cliを使用（ただし別に使わなくても良い）
+コマンドプロンプト(cmd.exe)での使用
+
+### 注意　DONE
+この記事は「私は普段このような運用をしています」というものなので、これが正解というわけではありません。
+やり方の一つとして見ていただければと思います。
+それでは行きましょう
+
+## git設定編
+> gitの設定がlocal,global,systemの3つの階層があることは重要なので理解しておいでください。
+> ※私は基本的にlocalとglobalしかいじりません。
+
+### user, mail設定 DONE
+コマンドでも可能ですが、私は設定ファイルを直接いじることが多いです。
+1. %userprofile%\.gitconfig を開く（ファイルがなければ作成する　文字コード: utf8）
+2. 以下の通り追加
+```
+[user]
+	name = user_username
+	email = user_email@mail.com
+```
+
+### 自動改行 DONE
+デフォルトだとpullとかpushとかしたときにgitが勝手に改行コードをOSに合わせて変更するようになっているので、それを無効化します。
+（つまりgitが勝手に改行コードを変更したりしなくなります）
+```
+[core]
+	autoCRLF = false
+```
+
+### エディタの設定 DONE
+デフォルトだとviになっているので、使い慣れたエディタに変更する。
+※私はサクラエディタを使います。
+※exeファイルへの絶対パスを指定するか、パスを通している場合は以下のように実行ファイル名のみの指定も可能。
+[core]
+	editor = sakura
+
+### ssh鍵の作成、登録　YET:ユーザ名とかキーとか伏せる
+1. 公開鍵、秘密鍵の作成　
+$ssh-keygen -t ecdsa
+C:\develop\WHAT_IS\what_is_help>ssh-keygen -t ecdsa
+Generating public/private ecdsa key pair.
+Enter file in which to save the key (C:\Users\nogam/.ssh/id_ecdsa):　#何も入力せずEnter
+Enter passphrase (empty for no passphrase):　#何も入力せずEnter
+Enter same passphrase again:　#何も入力せずEnter
+Your identification has been saved in C:\Users\nogam/.ssh/id_ecdsa. #こっちが秘密鍵
+Your public key has been saved in C:\Users\nogam/.ssh/id_ecdsa.pub. #こっちが公開鍵 
+The key fingerprint is:
+SHA256:RM2s4arANAGIPqlqe3fdTd03dwasML3fgQqxwCW7HdzqZ/krVMo nogam@DESKTOP-NENE
+The key's randomart image is:
++---[ECDSA 256]---+
+|o+      o+.      |
+|+ +    o =+.     |
+|.  o    =.+ .    |
+|.   o ...+ * ..  |
+|. .  * .S *.oo.  |
+|.o o..o. . oE=   |
+|. o . . o +.B o  |
+|         o =.o . |
+|             .o. |
++----[SHA256]-----+
+
+2. githubに公開鍵を登録
+github.comにログインし、settings⇒SSH and GPG keys⇒new SSH Key
+title: 任意の名前を登録（例えばPCのホスト名とか）
+key type: Authentication Key
+Key: 先ほど作成したキー(C:\Users\nogam/.ssh/id_ecdsa.pub)をテキストエディタで開き、中身をコピーして貼り付け
+[Add SSH Key]押下
+
+これでgithubにSSH接続が可能です（要するにpushとかできるようになる）
+
+#### TortoiseGitの場合　YET: ユーザ名とか伏せる
+1. TortoiseGit\bin\puttygen.exeを実行
+2. Generate⇒枠内でマウスを適当に動かすと鍵が作成される。
+3. [Save public key]押下⇒C:\Users\nogam/.ssh/tortoise_puttyに保存
+4. [Save public key]押下⇒C:\Users\nogam/.ssh/tortoise_putty.ppkに保存
+5. githubに公開鍵を登録 ※登録手順は上記の「githubに公開鍵を登録」と同様　※C:\Users\nogam/.ssh/tortoise_puttyの中身をgithubに登録
+6.Pagentに登録
+```
+cd TortoiseGit\bin
+pageant.exe "C:\Users\nogam\.ssh\for_tortoise_git.ppk"
+```
+
+これでTortoiseGitを使用してgithubにSSH接続が可能です（要するにTortoiseGitでpushとかできるようになる）
+
+
+## 運用編　DONE
+### Fork　DONE
+こちらを使っていきます。
+https://github.com/monkey999por/TestRep
+github上で操作フォークしたいリポジトリでforkボタン押下⇒[Create fork]
+これで自分のリポジトリにフォークが作成されます。
+
+
+### git clone DONE
+```
+$git clone git@github.com:monkey999por-sub/TestRep.git
+$cd TestRep
+```
+
+### upstreamの設定、確認(git remote add upstream $URL) DONE
+```
+$git remote add upstream https://github.com/monkey999por/TestRep.git
+#正しく設定されているか確認
+#origin: forkしたリポジトリ
+#upstream: fork元のリポジトリ
+$git remote -v
+origin  git@github.com:monkey999por-sub/TestRep.git (fetch)
+origin  git@github.com:monkey999por-sub/TestRep.git (push)
+upstream        https://github.com/monkey999por/TestRep.git (fetch)
+upstream        https://github.com/monkey999por/TestRep.git (push)
+
+#リモートブランチの確認 origi/mainnとupstream/mainがあればOK
+$git fetch -p upstream
+$git branch --remote
+  origin/HEAD -> origin/main
+  origin/main
+  upstream/main
+
+```
+
+
+### ローカルブランチの作成、originへの紐づけ(git checkout -b develop, git push -u origin develop) DONE
+```
+$git checkout -b develop
+Switched to a new branch 'develop'
+
+$git push -u origin develop
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/monkey999por-sub/TestRep/pull/new/develop
+remote:
+To github.com:monkey999por-sub/TestRep.git
+ * [new branch]      develop -> develop
+branch 'develop' set up to track 'origin/develop'.
+
+#ちゃんと紐づいているか確認
+$git branch -vv
+* develop 4f11259 [origin/develop] comment
+
+```
+
+### すでにoriginにブランチが存在する場合は、以下のように設定することも可能 DONE
+```
+$git branch -u origin/develop develop
+branch 'develop' set up to track 'origin/develop'.
+```
+
+### commit, push (git commit -m "comment", git push)
+```
+$git add .
+$
+$git commit -m "originで追加"
+$git push 
+```
+### upstraemの更新を取得(=originを最新化)(git fetch -p upstream, git merge upstream/develop)
+```
+#upstreamの更新情報を取得
+$git fetch -p upstream
+
+#自分のローカルブランチにupstreamを取り込み
+$git merge upstream/main
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+あらら、コンフリクトしちゃいました。
+
+### コンフリクトの解消(both) (解消後にmerge commit)
+```
+#状況確認
+$git status
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   file.txt #これがコンフリクトしてる
+        
+```
+コンフリクトしているファイルを開き、修正する。
+`<<<<<<< HEAD`と`=======`の間: HEADから追加しようとした（`<`の向きで「どこからどこに向かって」が判断可能)
+
+`=======` と`>>>>>>> upstream/main`の間: upstream/mainで追加されていた内容
+
+```
+<<<<<<< HEAD
+
+originで追加したもの
+
+=======
+
+upstreamで追加されていたもの
+
+>>>>>>> upstream/main
+```
+
+修正後
+修正方法としては`<<<...`と`===...`と`>>>...`を削除して、中身をいい感じに結合なり書き換えなりします。今回はどちらも残すようにしました。
+```file.txt
+originで追加したもの
+upstreamで追加されていたもの
+```
+
+```
+$git add file.txt
+$git commit -m "merge commit"
+$git push 
+$git l #lにalias設定してます。詳細は後述
+*   [2022-11-20 6 minutes ago]  monkey999por-sub        e94ec15  (HEAD -> develop, origin/develop)merge commit
+|\
+| * [2022-11-20 27 minutes ago]         monkey999por    61bc096  (upstream/main)upstreamで追加
+* | [2022-11-20 25 minutes ago]         monkey999por-sub        0974599 originで追加
+```
+
+### pull request作成(gh pr create)
+
+```
+$gh pr create
+? Which should be the base repository (used for e.g. querying issues) for this directory? monkey999por/TestRep
+# upstreamに設定したリポジトリを選択
+
+Creating pull request for monkey999por-sub:develop into main in monkey999por/TestRep
+
+? Title first pull request
+? Body <Received>
+? What's next? Submit
+https://github.com/monkey999por/TestRep/pull/1
+```
+
+ここまでで基本的にやることは終わり
+
+
+### ブランチ削除(local: git branch -D develop , remote: git push -d origin develop)
+ローカルブランチの削除
+```
+git branch -d branch_name
+```
+
+リモートブランチの削除
+```
+git push -d origin branch_name
+```
+
+
+##　よく使うコマンド集
+### ローカルブランチをupstreamの最新に合わせる
+```
+$git fetch -p upstream
+$git reset --hard upstream/branch_name
+```
+### commitの取り消し
+```
+$git commit -m "dummy commit"
+#取り消し
+$git reset --mixed head~
+```
+
+### ブランチ存在確認
+```
+git branch -a | find /i "branch_name"
+```
+### 状態の確認(git status)
+
+### gitignoreが反映されない場合(キャッシュの削除)
+こちらの記事が参考になります
+https://qiita.com/fuwamaki/items/3ed021163e50beab7154
+
+### 特定のファイルを戻す
+```
+
+```
+### ファイル名のみの差分(--name-only)
+### commitの取り消し(git reset --hard head~)
+### コミットをまとめる(rebase -i)
+### ログフォーマット(でもログの確認は基本的にトータスの方がよいと思う)
+### aliasの設定
+### git reset --hard upstream/develop
+### 設定ファイルの場所 (global: %userprofile%\.gitconfig, local: プロジェクトフォルダの中の.git/config)
+### 強制push(非推奨)
+### 変更の一時保存、取り出し(git stash save "comment", git stash list, git stash apply)
+### tagの作成
+### 取り消しcommit(git revert)
+### なんか変なことになったらとりあえずこれでバックアップをとる
+例えばupstream取り込みmergeしてコンフリクト置きまくったときとか。なれないと焦ると思うが、いったん以下のことだけしておけばバックアップはとれる。
+```
+git add .
+git stash save "comment"
+git stash list
+git fetch -p upstream main
+git reset --hard upstream/main
+git stash apply stash@{n} ※n
+コンフリクトの解消
+git add .
+git commit -m "merge commit"
+git push 
+gh pr create
+
+```
+
+## そのうち追記予定
+### git submodule(前に使ったことあるけどたぶんそこまで使われてない？）
+
+### その他：gitのremoteリポジトリをローカル上に作成(あと共有の設定)
+git init --bare --sheard
+### helpとか
+### プロキシの設定
+#### 注意：パスワードに#等のbashでエスケープが必要な文字は事前にエンコードしておく必要がある。
+### 文字化け対応
+
+
+
+
+

@@ -1,0 +1,26 @@
+システム要件（windows 10なんてないけどまあデスクトップだし、多分大丈夫でしょ）
+https://www.jfrog.com/confluence/display/JFROG/System+Requirements
+
+
+ここからダウンロード
+https://jfrog.com/community/download-artifactory-oss/
+
+インストール
+https://www.jfrog.com/confluence/display/JFROG/Installing+Artifactory#InstallingArtifactory-WindowsInstallation
+
+注意：コマンドプロンプトを管理者で実行。
+　　　chcp 65001 で文字コードUTF8にしないとだめ
+
+
+readme
+C:\tools\jfrog\artifactory\app\doc
+
+%JFROG_HOME%\artifactory\app\bin\artifactory.batで起動。サービスはなんかうまく起動しない。管理者権限じゃないと起動しない
+
+http://localhost:8046
+
+adminパスワード 
+admin
+Kinuhata1258
+
+http://monkey999-jfrog-airtifactory.com
