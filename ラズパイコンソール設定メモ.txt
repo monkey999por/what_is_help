@@ -1,0 +1,14 @@
+git clone ssh://monkey999@192.168.10.61/home/monkey999/gitrep/account.git
+
+
+
+fbterm
+実機だったら、Ctrl+Alt+F2 とすれば仮想コンソールに画面が切り替わります。
+
+
+
+LANGUAGE=en_US.UTF-8
+LANG=en_US.UTF-8
+
+
+ssh monkey999@192.168.10.61

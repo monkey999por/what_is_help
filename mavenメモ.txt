@@ -1,0 +1,8 @@
+jarに固めるときは
+<sourceDirectory>src</sourceDirectory>
+を設定する。デフォルトはsrc/main/javaなのでその下にクラスを作っていく感じでもOK
+
+
+
+ファイル読み込むときはこんな感じで書くとフルパスが取れる
+new File(getClass().getClassLoader().getResource("setting.properties").getFile()).getAbsolutePath();
