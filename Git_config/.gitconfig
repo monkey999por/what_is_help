@@ -13,8 +13,8 @@
 	c = checkout
 	ch = cherry-pick
 	d = diff
-	rmh = reset --mixed head
-	rhh = reset --hard head
+	rmh = reset --mixed HEAD
+	rhh = reset --hard HEAD
 	s = status
 	f = fetch
 	l = log --graph --all --format='[%as %ah] %x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(green reverse)%d%Creset%s' --branches
